@@ -49,7 +49,7 @@
 	var express = __webpack_require__(3);
 	var serveStatic = __webpack_require__(4);
 	var socketIo = __webpack_require__(5);
-	var port = process.env.PORT || 3000;
+	var port = process.env.PORT || 5000;
 	var app = express();
 	var server = http["Server"](app);
 	var root = path.join(path.resolve(__dirname, "../public/"));
