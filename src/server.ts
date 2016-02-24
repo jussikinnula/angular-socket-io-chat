@@ -4,7 +4,7 @@ import express = require("express");
 import serveStatic = require("serve-static");
 import socketIo = require("socket.io");
 
-const port: number = process.env.PORT || 3000;
+const port: number = process.env.PORT || 5000;
 
 let app: express.Express = express();
 let server = http["Server"](app);

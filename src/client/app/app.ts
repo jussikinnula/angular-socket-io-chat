@@ -27,7 +27,7 @@ export class App {
     constructor() {}
 
     connect() {
-        this.socket = io("http://localhost:3000/");
+        this.socket = io(window.location.hostname);
         this.socket.on("connect", () => {
             this.socket.emit("register", this.nickname);
             this.connected = true;
