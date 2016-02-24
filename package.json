@@ -1,0 +1,52 @@
+{
+  "name": "angular2-socketio-chat-example",
+  "version": "0.0.1",
+  "description": "An example Angular 2 chat app, made on top of ExpressJS & Socket.io.",
+  "homepage": "https://github.com/jussikinnula/",
+  "repository": "https://github.com/jussikinnula/angular2-socketio-chat-example",
+  "author": {
+    "name": "Jussi Kinnula",
+    "email": "jussi.kinnula@frantic.com"
+  },
+  "license": "GPL-3.0",
+  "engines": {
+    "node": ">=4.2"
+  },
+  "scripts": {
+    "install": "./node_modules/typings/dist/bin/typings.js install",
+    "clean": "./node_modules/.bin/de ./public",
+    "build": "./node_modules/.bin/webpack --config webpack.js --progress",
+    "server": "node public/server.js",
+    "start": "npm run clean && npm run build && npm run server"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.6",
+    "es6-shim": "~0.33.3",
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "rxjs": "5.0.0-beta.0",
+    "serve-static": "^1.10.2",
+    "socket.io": "^1.4.5",
+    "socket.io-client": "^1.4.5"
+  },
+  "devDependencies": {
+    "css-loader": "~0.23.1",
+    "del": "~2.2.0",
+    "del-cli": "~0.1.2",
+    "extract-text-webpack-plugin": "~1.0.1",
+    "html-webpack-plugin": "~1.7.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "~3.4.2",
+    "postcss-loader": "~0.8.0",
+    "raw-loader": "~0.5.1",
+    "reflect-metadata": "0.1.2",
+    "sass-loader": "~3.1.2",
+    "style-loader": "~0.13.0",
+    "ts-loader": "~0.8.0",
+    "typescript": "~1.7.5",
+    "typings": "~0.6.8",
+    "webpack": "~1.12.13",
+    "webpack-merge": "^0.7.3",
+    "zone.js": "0.5.14"
+  }
+}
