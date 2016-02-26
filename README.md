@@ -23,7 +23,7 @@ npm start
 
 ### Open local app in browser
 
-http://localhost:5000/
+[http://localhost:5000/](http://localhost:5000/)
 
 ## Heroku
 
