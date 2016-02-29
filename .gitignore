@@ -1,5 +1,6 @@
 **/node_modules/
 /typings
+/public
 tmp/
 __MACOSX/
 .DS_Store
