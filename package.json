@@ -15,8 +15,8 @@
   "scripts": {
     "clean": "./node_modules/.bin/de ./public",
     "build": "./node_modules/.bin/webpack --config webpack.js",
-    "start": "npm run build && node public/server.js",
-    "postinstall": "./node_modules/typings/dist/bin/typings.js install"
+    "start": "node public/server.js",
+    "postinstall": "npm run build && ./node_modules/typings/dist/bin/typings.js install"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.6",
