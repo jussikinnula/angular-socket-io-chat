@@ -16,22 +16,21 @@
     "clean": "./node_modules/.bin/de ./public",
     "build": "./node_modules/.bin/webpack --config webpack.js",
     "start": "node public/server.js",
-    "postinstall": "./node_modules/typings/dist/bin/typings.js install && npm run build"
+    "postinstall": "./node_modules/.bin/typings install && npm run build"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.6",
+    "angular2": "2.0.0-beta.9",
     "css-loader": "~0.23.1",
-    "es6-shim": "~0.33.3",
+    "es6-shim": "~0.34.1",
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "~1.0.1",
-    "html-webpack-plugin": "~1.7.0",
-    "http": "0.0.0",
+    "html-webpack-plugin": "~2.9.0",
     "json-loader": "^0.5.4",
     "node-sass": "~3.4.2",
-    "postcss-loader": "~0.8.0",
+    "postcss-loader": "~0.8.1",
     "raw-loader": "~0.5.1",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.2",
     "sass-loader": "~3.1.2",
     "serve-static": "^1.10.2",
     "socket.io": "^1.4.5",
@@ -39,10 +38,10 @@
     "style-loader": "~0.13.0",
     "ts-loader": "~0.8.0",
     "typescript": "~1.7.5",
-    "typings": "~0.6.8",
-    "webpack": "~1.12.13",
+    "typings": "~0.7.8",
+    "webpack": "~1.12.14",
     "webpack-merge": "^0.7.3",
-    "zone.js": "0.5.14"
+    "zone.js": "0.6.2"
   },
   "devDependencies": {
     "del": "~2.2.0",
