@@ -1,4 +1,4 @@
-import { Component, View } from "angular2/core";
+import { Component } from "angular2/core";
 import { CORE_DIRECTIVES} from "angular2/common";
 import * as io from "socket.io-client";
 
@@ -6,10 +6,7 @@ const styles: string = require("./app.scss");
 const template: string = require("./app.html");
 
 @Component({
-    selector: "app"
-})
-
-@View({
+    selector: "app",
     directives: [
         CORE_DIRECTIVES
     ],
