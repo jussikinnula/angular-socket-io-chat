@@ -51,12 +51,14 @@ var client = {
         client: './src/client',
         vendor: [
             'es6-shim',
-            'angular2/bundles/angular2-polyfills',
-            'angular2/common',
-            'angular2/core',
-            'angular2/platform/browser',
-            'angular2/router',
+            'reflect-metadata',
+            '@angular/common',
+            '@angular/core',
+            '@angular/platform-browser',
+            '@angular/platform-browser-dynamic',
+            '@angular/router',
             'rxjs',
+            'zone.js',
             'socket.io-client'
         ]
     },

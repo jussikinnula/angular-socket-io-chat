@@ -1,6 +1,6 @@
-import { enableProdMode, provide } from 'angular2/core';
-import { bootstrap } from 'angular2/platform/browser';
-import { ROUTER_PROVIDERS } from 'angular2/router';
+import { enableProdMode, provide } from '@angular/core';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { ROUTER_PROVIDERS } from '@angular/router';
 
 // root component
 import { App } from './client/app/app';
