@@ -2,19 +2,17 @@ import { Component } from "@angular/core";
 import { CORE_DIRECTIVES} from "@angular/common";
 import * as io from "socket.io-client";
 
-const styles: string = require("./app.scss");
-const template: string = require("./app.html");
+declare var require;
+const styles: string = require("./app.component.scss");
+const template: string = require("./app.component.html");
 
 @Component({
     selector: "app",
-    directives: [
-        CORE_DIRECTIVES
-    ],
     styles: [styles],
     template
 })
 
-export class App {
+export class AppComponent {
     socket: any;
     connected: boolean = false;
     nickname: string = "user-" + Math.floor((Math.random() * 1000) + 1);;
