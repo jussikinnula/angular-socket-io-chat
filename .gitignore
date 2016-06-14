@@ -5,3 +5,4 @@ tmp/
 __MACOSX/
 .DS_Store
 Thumbs.db
+.env
