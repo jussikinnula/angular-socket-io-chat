@@ -77,8 +77,9 @@ If you wish to add more typings easily you can install `typings` npm package glo
 
 ```
 npm install -g typings
-typings install
 ```
+
+After that you can install more typings for packages with `typings install <package> --save` or with `--global` or global (formerly _ambient_ typings).
 
 ## Local development
 
