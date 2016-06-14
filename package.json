@@ -13,9 +13,9 @@
     "node": ">=5"
   },
   "scripts": {
-    "clean": "./node_modules/.bin/de ./public",
+    "clean": "./node_modules/.bin/de ./target",
     "build": "./node_modules/.bin/webpack --config webpack.server.js && ./node_modules/.bin/webpack --config webpack.client.js",
-    "start": "node public/server.js",
+    "start": "node target/server.js",
     "postinstall": "./node_modules/.bin/typings install && npm run build"
   },
   "dependencies": {
