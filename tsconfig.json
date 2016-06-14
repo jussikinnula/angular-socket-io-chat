@@ -1,5 +1,5 @@
 {
-  "version": "1.8.9",
+  "version": "1.8.10",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -11,7 +11,8 @@
   "files": [
     "src/client.ts",
     "src/server.ts",
-    "typings/main.d.ts"
+    "typings/index.d.ts",
+    "typings/custom/custom.d.ts"
   ],
   "exclude": [
     "node_modules/**/*.ts"
