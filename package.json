@@ -15,7 +15,7 @@
   "scripts": {
     "clean": "./node_modules/.bin/de ./target",
     "build": "./node_modules/.bin/webpack --config webpack.server.js && ./node_modules/.bin/webpack --config webpack.client.js",
-    "start": "node target/server.js",
+    "start": "node target/assets/js/server.js",
     "postinstall": "./node_modules/.bin/typings install && npm run build"
   },
   "dependencies": {
