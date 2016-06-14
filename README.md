@@ -69,9 +69,11 @@ Note! You can also unload with `launchctl`, as well as add the load/unload comma
 npm install
 ```
 
-### Install typings
+Note! Typings are automatically installed along with the `npm install`.
 
-You need to install `typings` globally, so that you can install the typings easily (alternative is to use `node_modules/typings/dist/typings.js install`):
+#### Install typings globally (optional)
+
+If you wish to add more typings easily you can install `typings` npm package globally with the following command:
 
 ```
 npm install -g typings
