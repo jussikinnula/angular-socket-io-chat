@@ -1,0 +1,19 @@
+<div class="box">
+    <button class="leave" (click)="leave(room)">leave</button>
+    <h1>
+        {{room.name}}
+    </h1>
+    <h2>Created: {{room.created}}</h2>
+    <div class="messages" #scroll>
+        <div class="message" *ngFor="let item of messages | orderBy:'created':false">
+            <span class="dimmed">{{item.created}}</span>
+            &lt;{{item.from}}&gt;
+            {{item.message}}
+        </div>
+    </div>
+    <h3>
+        &lt;{{userService.nickname}}&gt;
+        <input #focus [(ngModel)]="message" (keypress)="eventHandler($event)">
+        <button (click)="send()">Send</button>
+    </h3>
+</div>

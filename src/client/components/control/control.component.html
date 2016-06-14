@@ -1,0 +1,13 @@
+<span>
+    <select [(ngModel)]="room">
+        <option value="">Select room...</option>
+        <option *ngFor="let room of roomService.rooms | async" [value]="room.name">{{room.name}}</option>
+    </select>
+    <button (click)="join()">Join</button>
+    <button (click)="remove()">Remove</button>
+</span>
+<span>
+    New room:
+    <input [(ngModel)]="newRoom" (keypress)="eventHandler($event)">
+    <button (click)="create()">Create</button>
+</span>

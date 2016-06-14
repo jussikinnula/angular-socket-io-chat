@@ -1,0 +1,83 @@
+:host {
+    width: 100%;
+    display: inline-block;
+    @media (min-width: 700px) and (max-width: 999px) {
+        width: 50%;
+        float: left;
+    }
+    @media (min-width: 1000px) and (max-width: 1299px) {
+        width: 33.333333%;
+        float: left;
+    }
+    @media (min-width: 1300px) and (max-width: 1599px) {
+        width: 25%;
+        float: left;
+    }
+    @media (min-width: 1600px) and (max-width: 1899px) {
+        width: 20%;
+        float: left;
+    }
+    @media (min-width: 1900px) and (max-width: 2199px) {
+        width: 16.666666%;
+        float: left;
+    }
+    @media (min-width: 2200px) {
+        width: 14.285714%;
+        float: left;
+    }
+}
+
+.box {
+    border: 1px solid black;
+    padding: 0;
+    margin: 0.25em;
+    background-color: white;
+    box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 0.25em;
+    font-size: 1em;
+}
+
+h2 {
+    color: white;
+    background-color: gray;
+    margin: 0;
+    padding: 0.25em;
+    font-size: 0.7em;
+}
+
+h3 {
+    color: white;
+    background-color: gray;
+    margin: 0;
+    padding: 0.25em;
+    font-size: 1em;
+}
+
+.leave {
+    float: right;
+    margin: 0.25em;
+}
+
+.dimmed {
+    color: silver;
+}
+
+.messages {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 20em;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.message {
+    margin: 0 0 0.2em 0;
+    padding: 0;
+}

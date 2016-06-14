@@ -1,0 +1,9 @@
+:host {
+    display: block;
+    padding: 0.25em;
+    margin: 0;
+    &:after {
+        content: " ";
+        clear: both;
+    }
+}

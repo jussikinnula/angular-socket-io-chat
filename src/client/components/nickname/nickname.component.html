@@ -1,0 +1,10 @@
+<h1>Nickname</h1>
+
+<p>
+    Please set your nick name in order to start chatting!
+</p>
+
+<p>
+    <input #focus [(ngModel)]="nickname" (keypress)="eventHandler($event)">
+    <button (click)="save()">Save</button>
+</p>

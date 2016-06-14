@@ -1,0 +1,1 @@
+export * from "./nickname.component";
