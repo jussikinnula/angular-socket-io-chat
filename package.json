@@ -33,7 +33,7 @@
     "html-webpack-plugin": "~2.21.0",
     "immutable": "~3.8.1",
     "json-loader": "~0.5.4",
-    "mongoose": "^4.4.20",
+    "mongoose": "~4.5.0",
     "node-sass": "~3.7.0",
     "postcss-loader": "~0.9.1",
     "raw-loader": "~0.5.1",
@@ -46,7 +46,7 @@
     "style-loader": "~0.13.1",
     "ts-loader": "~0.8.2",
     "typescript": "~1.8.10",
-    "typings": "~1.0.5",
+    "typings": "~1.1.0",
     "webpack": "~1.13.1",
     "zone.js": "~0.6.12"
   },
@@ -55,13 +55,13 @@
     "del": "~2.2.0",
     "del-cli": "~0.2.0",
     "gulp": "gulpjs/gulp.git#4.0",
-    "gulp-connect": "~4.0.0",
+    "gulp-connect": "~4.1.0",
     "gulp-livereload": "~3.8.1",
-    "gulp-nodemon": "~2.0.7",
+    "gulp-nodemon": "~2.1.0",
     "gulp-sourcemaps": "~2.0.0-alpha",
     "gulp-tslint": "~5.0.0",
     "gulp-util": "~3.0.7",
-    "tslint": "~3.10.1",
+    "tslint": "~3.11.0",
     "webpack-livereload-plugin": "~0.8.1"
   }
 }
