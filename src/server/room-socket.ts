@@ -1,4 +1,5 @@
 import { IRoom, Room } from "../models/room.model";
+import { IMessage, Message } from "../models/message.model";
 
 import { MessageSocket } from "./message-socket";
 
@@ -60,6 +61,7 @@ export class RoomSocket {
      */
     private createRoom(room: IRoom): void {
         if (!this.rooms[room.name]) {
+            console.log("Creating namespace for room:", room.name);
             this.rooms[room.name] = new MessageSocket(this.io, room.name);
         }
         this.nsp.emit("create", room);        
@@ -94,6 +96,12 @@ export class RoomSocket {
      * @return void
      */
     private remove(name: string): void {
+        // First remove room messages
+        Message.remove({
+            room: name
+        }).exec();
+
+        // Remove room
         Room.remove({
             name: name
         }).exec( (error: any, room: IRoom) => {

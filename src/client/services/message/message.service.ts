@@ -20,7 +20,7 @@ export class MessageService {
     constructor(private room: string) {
         this.socketService = new SocketService();
         this.socketService
-            .get("messages/" + this.room)
+            .get("messages/" + encodeURIComponent(this.room))
             .subscribe(
                 (socketItem: ISocketItem) => {
                     let message: IMessage = socketItem.item;

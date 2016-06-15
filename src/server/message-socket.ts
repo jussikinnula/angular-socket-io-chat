@@ -15,7 +15,7 @@ export class MessageSocket {
      * @param name string
      */
     constructor(io: any, private room: string) {
-        this.nsp = io.of("/messages/" + this.room);
+        this.nsp = io.of("/messages/" + encodeURIComponent(this.room));
         this.nsp.on("connection", (socket: any) => {
             console.log("Client connected to room:", this.room);
             this.socket = socket;

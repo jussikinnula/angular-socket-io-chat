@@ -29,11 +29,12 @@ export class SocketService {
       */
     get(name: string): Observable<any> {
         this.name = name;
-        this.socket = io.connect(this.host + "/" + this.name);
+        let socketUrl = this.host + "/" + this.name;
+        this.socket = io.connect(socketUrl);
         this.socket.on("connect", () => this.connect());
         this.socket.on("disconnect", () => this.disconnect());
         this.socket.on("error", (error: string) => {
-            console.log(`ERROR: "${error}"`);
+            console.log(`ERROR: "${error}" (${socketUrl})`);
         });
 
         // Return observable which follows "create" and "remove" signals from socket stream

@@ -11,7 +11,10 @@ export interface IMessage {
 export interface IMessageModel extends IMessage, mongoose.Document {}
  
 export var MessageSchema = new mongoose.Schema({
-    room: String,
+    room: {
+        type: String,
+        index: true
+    },
     created: Date,
     from: String,
     to: String,
