@@ -22,7 +22,6 @@ export class RoomSocket {
             console.log("Client connected");
             this.socket = socket;
             this.listen();
-            this.list();
         });
     }
 

@@ -6,7 +6,7 @@ import { ROUTER_PROVIDERS } from "@angular/router-deprecated";
 import { AppComponent } from "./client/app";
 
 // service providers
-import { SERVICE_PROVIDERS } from "./client/services/providers"
+import { SERVICE_PROVIDERS } from "./client/services/providers";
 
 // global styles
 import "./styles/styles.scss";

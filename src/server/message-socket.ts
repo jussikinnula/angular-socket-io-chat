@@ -20,7 +20,6 @@ export class MessageSocket {
             console.log("Client connected to room:", this.room);
             this.socket = socket;
             this.listen();
-            this.list();
         });
     }
 
