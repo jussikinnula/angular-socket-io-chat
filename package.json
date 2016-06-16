@@ -1,6 +1,6 @@
 {
   "name": "angular2-socketio-chat-example",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An example Angular 2 chat app, made on top of ExpressJS & Socket.io.",
   "homepage": "https://github.com/jussikinnula/",
   "repository": "https://github.com/jussikinnula/angular2-socketio-chat-example",
