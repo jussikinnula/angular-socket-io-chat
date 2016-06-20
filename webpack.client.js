@@ -24,9 +24,7 @@ module.exports = {
             {test: /\.html$/, loader: 'raw'},
             {test: /\.scss$/, include: [path.resolve(__dirname, 'src/client')], loader: 'raw!postcss-loader!sass'},
             {test: /\.scss$/, exclude: [path.resolve(__dirname, 'src/client')], include: [path.resolve(__dirname, 'src/styles')], loader: ExtractTextPlugin.extract('css!postcss-loader!sass')},
-            {test: /\.json$/, loader: 'json'},
-            {test: /\.ts$/, include: [path.resolve(__dirname, 'node_modules/MyDatePicker')], loader: 'ts'},
-            {test: /\.scss$/, include: [path.resolve(__dirname, 'node_modules/MyDatePicker')], loader: 'raw!postcss-loader!sass'}
+            {test: /\.json$/, loader: 'json'}
         ],
 
         noParse: [
