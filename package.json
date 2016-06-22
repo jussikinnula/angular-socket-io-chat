@@ -13,8 +13,11 @@
     "node": ">=5"
   },
   "scripts": {
-    "clean": "./node_modules/.bin/de ./target",
-    "build": "./node_modules/.bin/webpack --config webpack.server.js && ./node_modules/.bin/webpack --config webpack.client.js",
+    "clean": "./node_modules/.bin/del ./target",
+    "build": "npm run build:server && npm run build:client",
+    "build:client": "./node_modules/.bin/webpack --config webpack.client.js",
+    "build:server": "./node_modules/.bin/webpack --config webpack.server.js",
+    "gulp": "./node_modules/.bin/gulp",
     "start": "node target/assets/js/server.js",
     "postinstall": "./node_modules/.bin/typings install && npm run build"
   },
@@ -24,9 +27,12 @@
     "@angular/core": "~2.0.0-rc.2",
     "@angular/platform-browser": "~2.0.0-rc.2",
     "@angular/platform-browser-dynamic": "~2.0.0-rc.2",
-    "@angular/router-deprecated": "^2.0.0-rc.2",
+    "@angular/router-deprecated": "~2.0.0-rc.2",
+    "autoprefixer": "~6.3.6",
     "css-loader": "~0.23.1",
-    "dotenv": "^2.0.0",
+    "del": "~2.2.1",
+    "del-cli": "~0.2.0",
+    "dotenv": "~2.0.0",
     "es6-shim": "~0.35.1",
     "express": "~4.13.4",
     "extract-text-webpack-plugin": "~1.0.1",
@@ -51,7 +57,7 @@
     "zone.js": "~0.6.12"
   },
   "devDependencies": {
-    "connect-history-api-fallback": "^1.2.0",
+    "connect-history-api-fallback": "~1.2.0",
     "del": "~2.2.0",
     "del-cli": "~0.2.0",
     "gulp": "gulpjs/gulp.git#4.0",
