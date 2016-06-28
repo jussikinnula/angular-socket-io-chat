@@ -36,7 +36,7 @@ module.exports = {
         cached: true,
         cachedAssets: true,
         chunks: true,
-        chunkModules: true,
+        chunkModules: false,
         colors: true,
         hash: false,
         reasons: false,
