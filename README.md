@@ -48,9 +48,9 @@ Note! Follow the instructions after installing NVM, so that you'll get the shell
 Then you can just install and use specific NodeJS version like:
 
 ```
-nvm install v5.11.1
-nvm use v5.11.1
-nvm alias default v5.11.1
+nvm install v6.3.1
+nvm use v6.3.1
+nvm alias default v6.3.1
 ```
 
 #### MongoDB
