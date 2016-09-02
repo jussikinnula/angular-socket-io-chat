@@ -10,7 +10,8 @@
   },
   "license": "GPL-3.0",
   "engines": {
-    "node": ">=5"
+    "node": ">=6",
+    "npm": ">=3"
   },
   "scripts": {
     "clean": "./node_modules/.bin/del ./target",

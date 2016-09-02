@@ -1,11 +1,13 @@
 # angular2-socketio-chat-example
 An example Angular 2 chat app, made on top of ExpressJS &amp; Socket.io.
 
+NOTE! The app currently is tested only to work with *Angular 2 RC2*. It should work at least with RC4 without any significant changes, however, with RC5 and RC6 there would be greater need of refactoring.
+
 ## Prequisities
 
 The projects needs that you have the following things installed:
 
-- [NodeJS](https://nodejs.org/) (version 5 or greater, tested with 5.11.1)
+- [NodeJS](https://nodejs.org/) (version 5 or greater, tested with 6.3.1)
 - [MongoDB](https://www.mongodb.com/) (tested with version 3.2.6)
 - [Heroku Toolbelt](https://toolbelt.heroku.com/) (latest)
 
