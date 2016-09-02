@@ -22,12 +22,12 @@
     "postinstall": "./node_modules/.bin/typings install && npm run build"
   },
   "dependencies": {
-    "@angular/common": "~2.0.0-rc.2",
-    "@angular/compiler": "~2.0.0-rc.2",
-    "@angular/core": "~2.0.0-rc.2",
-    "@angular/platform-browser": "~2.0.0-rc.2",
-    "@angular/platform-browser-dynamic": "~2.0.0-rc.2",
-    "@angular/router-deprecated": "~2.0.0-rc.2",
+    "@angular/common": "2.0.0-rc.2",
+    "@angular/compiler": "2.0.0-rc.2",
+    "@angular/core": "2.0.0-rc.2",
+    "@angular/platform-browser": "2.0.0-rc.2",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.2",
+    "@angular/router-deprecated": "2.0.0-rc.2",
     "autoprefixer": "~6.3.6",
     "css-loader": "~0.23.1",
     "del": "~2.2.1",
