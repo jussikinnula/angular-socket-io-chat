@@ -1,22 +1,40 @@
 {
-  "version": "1.8.10",
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
-    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "target": "es5"
+    "noEmitHelpers": true,
+    "strictNullChecks": false,
+    "baseUrl": "./src",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "express",
+      "hammerjs",
+      "jasmine",
+      "mime",
+      "mongodb",
+      "mongoose",
+      "node",
+      "serve-static",
+      "source-map",
+      "uglify-js",
+      "webpack"
+    ]
   },
-  "files": [
-    "src/client.ts",
-    "src/server.ts",
-    "typings/index.d.ts",
-    "typings/custom/custom.d.ts"
-  ],
   "exclude": [
-    "node_modules/**/*.ts"
+    "node_modules",
+    "target"
   ],
   "compileOnSave": false,
-  "buildOnSave": false
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }
