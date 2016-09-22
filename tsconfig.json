@@ -23,6 +23,8 @@
       "mongoose",
       "node",
       "serve-static",
+      "socket.io",
+      "socket.io-client",
       "source-map",
       "uglify-js",
       "webpack"
