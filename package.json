@@ -1,6 +1,6 @@
 {
   "name": "angular2-socketio-chat-example",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An example Angular 2 chat app, made on top of ExpressJS & Socket.io.",
   "homepage": "https://github.com/jussikinnula/",
   "repository": "https://github.com/jussikinnula/angular2-socketio-chat-example",
@@ -34,7 +34,7 @@
     "@types/mime": "~0.0.29",
     "@types/mongodb": "~2.1.33",
     "@types/mongoose": "~4.5.36",
-    "@types/node": "~6.0.41",
+    "@types/node": "~6.0.42",
     "@types/protractor": "~1.5.20",
     "@types/serve-static": "~1.7.31",
     "@types/socket.io": "^1.4.27",
