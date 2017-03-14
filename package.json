@@ -1,12 +1,12 @@
 {
   "name": "angular2-socketio-chat-example",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An example Angular 2 chat app, made on top of ExpressJS & Socket.io.",
   "homepage": "https://github.com/jussikinnula/",
   "repository": "https://github.com/jussikinnula/angular2-socketio-chat-example",
   "author": {
     "name": "Jussi Kinnula",
-    "email": "jussi.kinnula@frantic.com"
+    "email": "jussi.kinnula@gmail.com"
   },
   "license": "GPL-3.0",
   "engines": {
@@ -48,11 +48,9 @@
     "del": "~2.2.2",
     "del-cli": "~0.2.0",
     "dotenv": "^2.0.0",
-    "engine.io-client": "jussikinnula/engine.io-client",
     "express": "~4.14.0",
     "extract-text-webpack-plugin": "~2.0.0-beta.4",
     "html-webpack-plugin": "~2.22.0",
-    "http-browserify": "jussikinnula/http-browserify",
     "immutable": "~3.8.1",
     "json-loader": "~0.5.4",
     "mongoose": "~4.6.2",
@@ -70,7 +68,6 @@
     "typescript": "~2.0.3",
     "webpack": "2.1.0-beta.22",
     "webpack-merge": "^0.14.1",
-    "xmlhttprequest-ssl": "jussikinnula/node-XMLHttpRequest",
     "zone.js": "~0.6.25"
   },
   "devDependencies": {
