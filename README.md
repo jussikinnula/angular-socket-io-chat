@@ -2,8 +2,6 @@
 
 An example chat application made with Angular and Socket.io (and NodeJS, ExpressJS and MongoDB).
 
-Note! The
-
 ## Highlights
 
 - Angular 4.1.1 or later
