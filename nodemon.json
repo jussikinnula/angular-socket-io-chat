@@ -1,0 +1,7 @@
+{
+    "script": "target/server/index.js",
+    "watch": ["target/server"],
+    "ext": "js",
+    "env": { "NODE_ENV": "development" },
+    "ignore": ["target/assets"]
+}

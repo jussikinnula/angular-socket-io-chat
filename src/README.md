@@ -14,7 +14,7 @@ On this directory you will see *entrypoints* for the code. WebPack uses the thes
 
 - `app/` contains frontend-only code parts
 - `models/` contains models shared with frontend and backend
-- `server/` contains the backend code
+- `backend/` contains the backend code
 - `styles/` contains shared SCSS files
 
 

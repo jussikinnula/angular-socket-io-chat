@@ -1,3 +1,1 @@
-<template ngFor let-room [ngForOf]="userService.rooms">
-    <room [room]="room"></room>
-</template>
+<room *ngFor="let room of userService.rooms" [room]="room"></room>

@@ -1,4 +1,4 @@
 export interface ISocketItem {
-    action: string;
-    item: any;
+  action: string;
+  item: any;
 }

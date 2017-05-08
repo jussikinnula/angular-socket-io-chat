@@ -1,16 +1,16 @@
-# angular2-socketio-chat-example
+# ngx-socketio-chat-example
 
-An example chat application made with Angular 2 and Socket.io (and NodeJS, ExpressJS and MongoDB).
+An example chat application made with Angular and Socket.io (and NodeJS, ExpressJS and MongoDB).
+
+Note! The
 
 ## Highlights
 
-- Angular 2.0.0 final support (with `NgModule` -type of modules)
-- Webpack 2 & TypeScript 2
+- Angular 4.1.1 or later
+- Webpack 2.5.1 or later
+- TypeScript 2.3.2 or later
 - Styles with [SCSS](http://sass-lang.com/)
-- Webpack livereloading (on local development, not HMR but almost as good)
-- Full stack compilation on Heroku build process (this is really must to have, should also work on other systems)
-
-Note! This `angular2-socketio-chat-example` should be considered currently as *proof-of-concept*, as currently there's couple of hotfix packages used over the real ones, however, the changes have been already committed to upstream. Also Webpack 2 is currently on beta phase, as well as TypeScript 2 has a lot of pending issues still with types.
+- Full stack compilation on Heroku build process
 
 ## Prequisities
 
@@ -57,9 +57,11 @@ Note! Follow the instructions after installing NVM, so that you'll get the shell
 Then you can just install and use specific NodeJS version like:
 
 ```
-nvm install v6.3.1
-nvm use v6.3.1
+nvm install v7
+nvm use v7
 ```
+
+Note! This project is tested currently with NodeJS v7.10.0.
 
 #### MongoDB
 
@@ -74,15 +76,6 @@ Note! You can also unload with `launchctl`, as well as add the load/unload comma
 ### Installing prequisities on Windows
 
 You should install installer packages of [NodeJS](https://nodejs.org/en/download/current/), [MongoDB](https://www.mongodb.com/download-center) and [Heroku Toolbelt](https://toolbelt.heroku.com/windows), either 32bit or 64bit depending on your system.
-
-#### Install some Node modules globally
-
-Windows doesn't add everything to global path, so you might want to install some packages globally (`npm install -g <package>`):
-
-```
-npm install -g gulpjs/gulp-cli#4.0
-npm install -g webpack
-```
 
 #### MongoDB
 
@@ -126,29 +119,17 @@ npm run build
 npm start
 ```
 
-### Gulp (optional)
-
-The gulp tasks for this project require gulp v4-alpha. If you don't wish to globally install the v4 gulp-cli, you can run the gulp tasks using the locally installed gulp under ./node_modules/.bin — for example:
-
-```
-./node_modules/.bin/gulp
-```
-
-If you wish, you can also install Gulp globally:
-
-```
-npm install -g gulpjs/gulp-cli#4.0
-```
-
-After that you can just run:
-
-```
-gulp
-```
-
 ### Open local app in browser
 
 [http://localhost:5000/](http://localhost:5000/)
+
+### Continuous development
+
+```
+npm run dev
+```
+
+This runs Webpack in watch mode, which updates both client and server assets. Server is loaded automatically, client needs manual refreshing. TBD: HMR or livereloading.
 
 ## Configuration
 

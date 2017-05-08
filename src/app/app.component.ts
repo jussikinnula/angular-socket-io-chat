@@ -1,17 +1,14 @@
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from '@angular/core';
 
-import { UserService } from "./shared/user.service";
-
-declare var require;
-const styles: string = require("./app.component.scss");
-const template: string = require("./app.component.html");
+import { UserService } from './core';
 
 @Component({
-    selector: "app",
-    styles: [styles],
-    template
+  encapsulation: ViewEncapsulation.None,
+  selector: 'app',
+  styleUrls: ['./app.component.scss'],
+  templateUrl: './app.component.html'
 })
 
 export class AppComponent {
-    constructor(public userService: UserService) {}
+  constructor(public userService: UserService) {}
 }

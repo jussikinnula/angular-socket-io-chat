@@ -1,21 +1,21 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { OrderByPipe } from "./order-by.pipe";
-import { RoomService } from "./room.service";
-import { SocketService } from "./socket.service";
-import { UserService } from "./user.service";
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
-    declarations: [
-        OrderByPipe
-    ],
-    providers: [
-        RoomService,
-        SocketService,
-        UserService
-    ],
-    exports: [
-        OrderByPipe
-    ]
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
+  declarations: [
+    OrderByPipe
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    OrderByPipe
+  ]
 })
 export class SharedModule {}

@@ -1,18 +1,14 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-import { UserService } from "../shared";
-import { IRoom } from "../../models";
-
-declare var require;
-const styles: string = require("./rooms.component.scss");
-const template: string = require("./rooms.component.html");
+import { UserService } from '../core';
+import { IRoom } from '../../models';
 
 @Component({
-    selector: "rooms",
-    styles: [styles],
-    template
+  selector: 'rooms',
+  styleUrls: ['./rooms.component.scss'],
+  templateUrl: './rooms.component.html'
 })
 
 export class RoomsComponent {
-    constructor(public userService: UserService) {}
+  constructor(public userService: UserService) {}
 }

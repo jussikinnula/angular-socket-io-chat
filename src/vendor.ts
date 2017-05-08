@@ -1,15 +1,15 @@
-// Angular 2 components
-import "@angular/common";
-import "@angular/core";
-import "@angular/forms";
-import "@angular/platform-browser";
-import "@angular/platform-browser-dynamic";
+// Angular
+import '@angular/common';
+import '@angular/core';
+import '@angular/forms';
+import '@angular/platform-browser';
+import '@angular/platform-browser-dynamic';
 
 // ImmutableJS
-import "immutable";
+import 'immutable';
 
 // RxJS
-import "rxjs";
+import 'rxjs';
 
 // Socket.io client
-import "socket.io-client";
+import 'socket.io-client';

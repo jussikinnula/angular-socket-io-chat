@@ -1,4 +1,12 @@
-<h1>Angular 2 Chat</h1>
-<nickname *ngIf="!userService.nickname || userService.nickname === ''"></nickname>
-<control *ngIf="userService.nickname && userService.nickname !== ''"></control>
-<rooms *ngIf="userService.nickname && userService.nickname !== ''"></rooms>
+<header></header>
+
+<div *ngIf="userService.nickname && userService.nickname !== ''; then content else nickname"></div>
+
+<ng-template #nickname>
+  <nickname></nickname>
+</ng-template>
+
+<ng-template #content>
+  <control></control>
+  <rooms></rooms>
+</ng-template>
