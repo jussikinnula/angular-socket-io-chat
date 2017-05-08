@@ -16,7 +16,7 @@ The projects needs that you have the following things installed:
 
 - [NodeJS](https://nodejs.org/) (version 6 or greater, tested with 6.3.1)
 - [MongoDB](https://www.mongodb.com/) (tested with version 3.2.6)
-- [Heroku Toolbelt](https://toolbelt.heroku.com/) (latest)
+- [Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli) (latest)
 
 All of the prequisities are available on Linux, Windows and Mac OS X systems with their own installers (just go to links above and download package).
 
@@ -60,6 +60,12 @@ nvm use v7
 ```
 
 Note! This project is tested currently with NodeJS v7.10.0.
+
+#### Heroku Cli
+
+```
+brew install heroku-cli
+```
 
 #### MongoDB
 
