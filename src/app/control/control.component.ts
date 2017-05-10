@@ -18,6 +18,7 @@ export class ControlComponent {
   // Join room, when Join-button is pressed
   join(): void {
     this.roomService.join(this.room);
+    this.room = '';
   }
 
   // Create room, when Create-button is pressed and empty newRoom text input

@@ -4,6 +4,7 @@ import * as serveStatic from 'serve-static';
 import * as path from 'path';
 import * as socket from 'socket.io';
 import * as mongoose from 'mongoose';
+import * as redis from 'socket.io-redis';
 
 import { RoomSocket } from './socket';
 
@@ -57,12 +58,10 @@ export class Backend {
   // Configure databases
   private databases(): void {
     // MongoDB URL
-    let mongoDBUrl = process.env.MONGODB_URI || 'mongodb://localhost/chat';
+    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/chat';
 
     // Get MongoDB handle
-    this.mongo = mongoose.connect(mongoDBUrl);
-
-    // Use global promises with mongoose
+    this.mongo = mongoose.connect(MONGODB_URI);
     (<any>mongoose).Promise = global.Promise;
   }
 
@@ -70,6 +69,12 @@ export class Backend {
   private sockets(): void {
     // Get socket.io handle
     this.io = socket(this.server);
+
+    // Set Redis adapter
+    const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
+    this.io.adapter(redis(REDIS_URL));
+
+    // Set room socket
     let roomSocket = new RoomSocket(this.io);
   }
 

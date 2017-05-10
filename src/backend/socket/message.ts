@@ -1,15 +1,14 @@
-import { IMessage, Message } from "../../models";
+import { IMessage, Message, Room } from "../../models";
 
 export class MessageSocket {
   nsp: any;
-  name: string;
   data: any;
   socket: any;
 
-  constructor(io: any, private room: string) {
-    this.nsp = io.of("/messages/" + encodeURIComponent(this.room));
+  constructor(io: any, public room: Room) {
+    this.nsp = io.of("/messages/" + encodeURIComponent(this.room.name));
     this.nsp.on("connection", (socket: any) => {
-      console.log("Client connected to room:", this.room);
+      console.log("Client connected to room:", this.room.name);
       this.socket = socket;
       this.listen();
     });
@@ -18,38 +17,28 @@ export class MessageSocket {
   // Add signal
   private listen(): void {
     this.socket.on("disconnect", () => this.disconnect());
-    this.socket.on("create", (message: IMessage) => this.create(message));
+    this.socket.on("create", message => this.create(message));
     this.socket.on("list", () => this.list());
   }
 
   // Handle disconnect
   private disconnect(): void {
-    console.log("Client disconnected from room:", this.room);
+    console.log("Client disconnected from room:", this.room.name);
   }
 
   // Create a message in a room
-  private create(message: IMessage): void {
-    Message.create(message, (error: any, message: IMessage) => {
-      if (!error && message) {
-        this.nsp.emit("create", message);
-      }
-    });
+  private create(params: IMessage): void {
+    params.room = this.room.name;
+    Message.create(params).subscribe(
+      message => this.nsp.emit('item', message),
+      error => console.error('Message sending failed', error)
+    );
   }
 
   // List all messages in a room
   private list(): void {
-    if (this.socket && this.socket.connected) {
-      Message
-        .find({ room: this.room }) // Find messages only on this room
-        .sort({ created: -1 }) // Sort newest messages first
-        .limit(25) // Limit to 25 first results
-        .exec(
-          (error: any, messages: IMessage[]) => {
-            for (let message of messages.reverse()) {
-              this.socket.emit("create", message);
-            }
-          }
-        );
-    }
+    this.room.messages()
+      .map(messages => messages.reverse())
+      .subscribe(messages => messages.map(message => this.socket.emit(message)));
   }
 }

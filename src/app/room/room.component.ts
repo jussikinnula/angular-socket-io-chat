@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 
-import { RoomService, UserService, SocketService } from '../core';
+import { RoomService, UserService } from '../core';
 import { IMessage, IRoom } from '../../models';
 import { MessageService } from './message.service';
 
@@ -19,22 +19,17 @@ export class RoomComponent implements OnInit, AfterViewInit, OnDestroy {
   private messageService: MessageService;
   private alreadyLeftChannel: boolean = false;
 
-  constructor(
-    private roomService: RoomService,
-    public userService: UserService,
-    public socketService: SocketService
-  ) {}
+  constructor(private roomService: RoomService, public userService: UserService) {}
 
   // Handle keypress event, for saving nickname
   ngOnInit(): void {
-    this.messageService = new MessageService(this.room.name);
+    this.messageService = new MessageService(this.userService, this.room.name);
     this.messageService.messages.subscribe(messages => {
       this.messages = messages;
       setTimeout( () => {
         this.scrollToBottom();
       }, 200);
     });
-    this.messageService.create(this.userService.nickname, 'joined the channel');
   }
 
   // After view initialized, focus on chat message text input
@@ -51,14 +46,14 @@ export class RoomComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // Send chat message, and reset message text input
   send(): void {
-    this.messageService.create(this.userService.nickname, this.message);
+    this.messageService.send(this.message);
     this.message = '';
   }
 
   // Leave room gracefully
   leave(): void {
     this.alreadyLeftChannel = true;
-    this.messageService.create(this.userService.nickname, 'left the channel');
+    this.messageService.leave();
     this.roomService.leave(this.room.name);
   }
 
