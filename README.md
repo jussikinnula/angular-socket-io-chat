@@ -171,6 +171,14 @@ You can use a free plan of [MongoLab](https://elements.heroku.com/addons/mongola
 heroku addons:create mongolab:sandbox
 ```
 
+### Add Redis
+
+You can use a free plan of [Heroku Redis](https://elements.heroku.com/addons/heroku-redis) for fast memory cache.
+
+```
+heroku addons:create heroku-redis:hobby-dev
+```
+
 ### Deploy
 
 ```
