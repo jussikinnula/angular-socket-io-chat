@@ -1,5 +1,5 @@
 {
-  "name": "angular2-socketio-chat-example",
+  "name": "ngx-socketio-chat-example",
   "version": "1.0.5",
   "description": "An example Angular 2 chat app, made on top of ExpressJS & Socket.io.",
   "homepage": "https://github.com/jussikinnula/",

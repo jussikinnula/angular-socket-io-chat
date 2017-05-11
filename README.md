@@ -75,7 +75,13 @@ ln -sf /usr/local/opt/mongodb/homebrew.mxcl.mongodb.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
 ```
 
-Note! You can also unload with `launchctl`, as well as add the load/unload commands to your `.bash_profile` or equivalent as aliases.
+#### Redis
+
+```
+brew install redis
+ln -sf /usr/local/opt/redis/homebrew.mxcl.redis.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+```
 
 ### Installing prequisities on Windows
 
@@ -94,6 +100,10 @@ After ensuring or creating the directory, you can just launch MongoDB from comma
 ```
 mongod.exe
 ```
+
+#### Redis
+
+You could use [Microsoft's port of Redis](https://github.com/MSOpenTech/redis/releases), which provides an easy to use installer.
 
 #### Other notes
 
