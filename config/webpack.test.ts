@@ -36,16 +36,16 @@ export const config = {
         ]
       },
       {
-        test: /\.html/,
-        loaders: ['raw-loader', 'html-loader']
+        test: /\.html$/,
+        use: ['raw-loader', 'html-loader']
       },
       {
-        test: /\.scss/,
-        loaders: ['raw-loader', 'postcss-loader', 'sass-loader']
+        test: /\.scss$/,
+        use: ['raw-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        use: ['json-loader']
       }
     ]
   }

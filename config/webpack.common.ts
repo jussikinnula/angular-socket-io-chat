@@ -52,19 +52,19 @@ export const commonConfig = {
       {
         test: /\.ts$/,
         exclude: [/\.(spec|e2e|d)\.ts$/],
-        loaders: ['ts-loader', 'angular2-template-loader']
+        use: ['ts-loader', 'angular2-template-loader']
       },
       {
-        test: /\.html/,
-        loader: 'html-loader'
+        test: /\.html$/,
+        use: ['html-loader']
       },
       {
-        test: /\.scss/,
-        loaders: ['raw-loader', 'postcss-loader', 'sass-loader']
+        test: /\.scss$/,
+        use: ['raw-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        use: ['json-loader']
       }
     ],
   }
