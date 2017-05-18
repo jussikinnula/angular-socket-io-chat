@@ -1,9 +1,9 @@
 {
-  "name": "ngx-socketio-chat-example",
+  "name": "angular-socket-io-chat-example",
   "version": "1.0.7",
-  "description": "An example Angular 2 chat app, made on top of ExpressJS & Socket.io.",
+  "description": "An example Angular chat app, made on top of ExpressJS & Socket.io.",
   "homepage": "https://github.com/jussikinnula/",
-  "repository": "https://github.com/jussikinnula/angular2-socketio-chat-example",
+  "repository": "https://github.com/jussikinnula/angular-socket-io-chat",
   "author": {
     "name": "Jussi Kinnula",
     "email": "jussi.kinnula@gmail.com"
