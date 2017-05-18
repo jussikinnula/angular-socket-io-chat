@@ -1,4 +1,4 @@
-# ngx-socketio-chat-example
+# angular-socket-io-chat
 
 An example chat application made with Angular and Socket.io (and NodeJS, ExpressJS and MongoDB).
 
