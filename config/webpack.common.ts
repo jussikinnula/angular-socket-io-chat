@@ -67,14 +67,14 @@ export const commonConfig = {
 // Client
 export const clientPlugins = [
   new CommonsChunkPlugin({
-    name: 'vendor',
-    filename: 'js/[name].[hash].js',
+    name: ['vendor', 'polyfills'],
+    filename: 'assets/js/[name].[hash].js',
     minChunks: Infinity
   }),
 
   new HtmlWebpackPlugin({
     chunksSortMode: 'dependency',
-    filename: '../index.html',
+    filename: 'index.html',
     hash: true,
     inject: 'body',
     template: './src/index.html'
@@ -86,13 +86,14 @@ export const clientConfig = {
 
   entry: {
     main: './src/main',
-    vendor: './src/vendor'
+    vendor: './src/vendor',
+    polyfills: './src/polyfills'
   },
 
   output: {
-    filename: 'js/[name].[hash].js',
-    path: root('./target/assets'),
-    publicPath: '/assets/'
+    filename: 'assets/js/[name].[hash].js',
+    path: root('./target'),
+    publicPath: '/'
   },
 
   node: {
@@ -115,9 +116,9 @@ export const serverConfig = {
   entry: './src/server',
 
   output: {
-    filename: '../server.js',
-    path: root('./target/assets'),
-    publicPath: '/assets/',
+    filename: 'server.js',
+    path: root('./target'),
+    publicPath: '/',
     libraryTarget: 'commonjs2'
   },
 
