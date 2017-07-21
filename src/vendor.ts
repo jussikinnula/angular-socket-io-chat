@@ -8,8 +8,5 @@ import '@angular/platform-browser-dynamic';
 // ImmutableJS
 import 'immutable';
 
-// RxJS
-import 'rxjs';
-
 // Socket.io client
 import 'socket.io-client';
